@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useRef} from 'react';
 import logo from './Assets/Grupo 258.svg';
 import bg_1 from './Assets/Grupo 32967.svg';
 import bg_2 from './Assets/Grupo 32966.svg'; 
@@ -57,10 +57,56 @@ export function Session() {
 
 export function Inversion() {
   const [searchFecha, setFecha]= useState("");
+  const [searchFecha2, setFecha2]= useState("");
   const [searchTipoDoc,setTipoDoc]=useState("");
 
   const [searchNumberDoc, setNumberDoc] =useState("");
   const [DB_1, setSearchDesembolso]=useState("");
+  const [isOP, setIsop] =useState(false);
+  function Vacio(){
+    setFecha('');
+    setFecha2('');
+    setTipoDoc('');
+    setNumberDoc('');
+    setSearchDesembolso('');
+    setIsop(false);
+  }
+  function hand(e){
+    const valor = e.target.value;
+    setIsop(valor || searchNumberDoc || DB_1 || searchFecha || searchFecha2);
+    setTipoDoc(valor);
+
+  }
+    function hand1(e){
+    const valor = e.target.value;
+    setIsop(valor || searchTipoDoc || DB_1 || searchFecha || searchFecha2);
+
+
+    setNumberDoc(valor);
+
+  }
+ function hand2(e){
+    const valor = e.target.value;
+    setIsop(valor || searchTipoDoc || searchNumberDoc || searchFecha || searchFecha2);
+
+    setSearchDesembolso(valor);
+
+  }
+
+ function hand3(e){
+    const valor = e.target.value
+    setIsop(valor || searchTipoDoc || searchNumberDoc || DB_1 || searchFecha2);
+
+    setFecha(valor);
+  }
+
+ function hand4(e){
+    const valor = e.target.value;
+    setIsop(valor || searchTipoDoc || searchNumberDoc || DB_1 || searchFecha);
+    setFecha2(valor);
+  }
+
+
 
   
   return (
@@ -100,29 +146,30 @@ export function Inversion() {
                 </div>
               </nav>
               <nav className='Barnav3 nv'>
-                <div className="Vaciar" id='Vclick'>
+                {isOP && <div className="Vaciar activo deactivo" id='Vclick' onClick={Vacio}>
                   X
-                </div>
+                </div>}
+
                   <div className="doc wg">
-                    <input type="text" id='Lleno' className='InL1'onChange={(_)=> setTipoDoc(_.target.value)} />
+                    <input type="text" id='Lleno' on value={searchTipoDoc} className='InL1'onChange={hand}/>
                     <label htmlFor="" className='Animation'>Tipo doc.</label>
                     <label className='arrowB' htmlFor=""></label>
                   </div>
                   <div className="Numero wg">
-                    <input type="text" id='Lleno' className='InL1' onChange={(_)=> setNumberDoc(_.target.value)}/>
+                    <input type="text" id='Lleno' value={searchNumberDoc} className='InL1' onChange={hand1}/>
                     <label htmlFor="" className='Animation'>Número de documento</label>
                   </div>
                   <div className="desembolso wg">
-                    <input type="text" id='Lleno' className='InL1' onChange={(e)=> setSearchDesembolso(e.target.value)}/>
+                    <input type="text" id='Lleno' value={DB_1} className='InL1' onChange={hand2}/>
                     <label htmlFor="" className='Animation'>Número de desembolso.</label>
                   </div>
                   <div className="day wg">
-                    <input type="text" id='Lleno' className='InL1' onChange={(_)=> setFecha(_.target.value)}/>
+                    <input type="text" id='Lleno' value={searchFecha} className='InL1' onChange={hand3}/>
                     <label htmlFor="" className='Animation'>Desde.</label>
                     <label htmlFor="" className='Calendar'><img src={Calendar} alt="" /></label>
                   </div>
                   <div className="hasta wg">
-                    <input type="text" id='Lleno'  className='InL1' onChange={(_)=> setFecha(_.target.value)}/>
+                    <input type="text" id='Lleno' value={searchFecha2}  className='InL1' onChange={hand4}/>
                     <label htmlFor="" className='Animation'>Hasta</label>
                     <label htmlFor="" className='Calendar'><img src={Calendar} alt="" /></label>                   
                   </div>
@@ -147,6 +194,11 @@ export function Inversion() {
                       return (searchFecha.toLowerCase() === ''
                       ? e
                       : e.Fechas.toString().includes(searchFecha)) 
+                    })
+                    .filter((e) => {
+                      return (searchFecha2.toLowerCase() === ''
+                      ? e
+                      : e.Fechas.toString().includes(searchFecha2))
                     })
                     .filter((e) => {
                       return (DB_1.toLowerCase() === '' 
