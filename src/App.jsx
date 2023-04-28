@@ -71,6 +71,7 @@ export function Inversion() {
     setSearchDesembolso('');
     setIsop(false);
   }
+  // Tipo Doc: Aparecer el boton  rojo en hand()
   function hand(e){
     const valor = e.target.value;
     setIsop(valor || searchNumberDoc || DB_1 || searchFecha || searchFecha2);
