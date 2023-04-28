@@ -63,6 +63,8 @@ export function Inversion() {
   const [searchNumberDoc, setNumberDoc] =useState("");
   const [DB_1, setSearchDesembolso]=useState("");
   const [isOP, setIsop] =useState(false);
+
+  // Limpio el valor
   function Vacio(){
     setFecha('');
     setFecha2('');
