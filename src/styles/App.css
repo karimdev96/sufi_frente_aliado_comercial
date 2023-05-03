@@ -1,12 +1,23 @@
-.Box {
+.Card1{
+    position: absolute;
+    /* width: 1345px; */
+    left: 40%;
+    height: 100%;
+    /* background: #492cbe; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+/* .Box {
     position: fixed;
-    width:100%;
-    height:100%;
     display:flex;
     align-items: center;
     justify-content:center;
     text-align: center;
-}
+    background: #31323F;
+} */
+
 .box-1 {
     width:400px;
     height:476px;
@@ -92,46 +103,32 @@
     font-size:12px;
 }
 .box-3{
-    left: 16px;
     position: relative;
+    left: 16px;
     margin-bottom: 12px;
     width: 368px;
     height:56px;
     border-radius: 6px;
     border: 1px solid #ABB9C780;
-    color: #413E4D;
-    font-size: 16px;
-    font-family: 'Open Sans', Regular;
-}
-.box-3 input {
-    outline:none;
-    width:336px;
-    height:20px;
-    background: none;
-    margin-top:14px;
-    padding-top: 35px;
-    cursor:pointer;
-    border:none;
-    margin-left:5px;
-}
-.box-3 label {
-    position:absolute;
-    top: 18px;
-    left: 16px;
-    color:#ABB9C7;
-    width: 336;
-    height: 16px;
-    cursor: pointer;
-    transition: top .2s;
-    user-select: none;
-    pointer-events: none;
-    
 }
 
-.box-3 input:focus-within ~ label {
+.box-3 input {
+    font-family: 'Open Sans', Regular;
+    color: #413E4D;
+    width:100%;
+    outline:none;
+    height:auto;
+    background: none;
+    padding-top: 28px;
+    cursor:pointer;
+    border:none;
+    font-size: 16px;
+    padding-left: 17px;
+}
+/* .box-3 input:focus-within ~ label {
     top:8px;
     font-size: 12px;
-}
+} */
 
 .bg1{
     display: block;
@@ -156,29 +153,29 @@
     position: absolute;
 
     z-index: -99999;
-    margin-top: -13%;
-    left:34%
+    margin-top: 25%;
+    left:-34%
 }
 .bg4 {
     position: absolute;
 
     z-index: -99999;
-    margin-bottom: -25%;
-    right:34%
+    bottom: 15%;
+    right:-30%;
 }
 .bg5 {
     position: absolute;
     width:10px;
     z-index: -99999;
     top:45%;
-    left:29%
+    left:-49%
 }
 .bg6 {
     position: absolute;
     z-index: -99999;
     width:10px;
-    top:70%;
-    right:35%
+    top:68%;
+    right:-35%
 }
 
 
@@ -189,53 +186,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 12px;
     font-size: 14px;
     box-shadow: 0px 3px 16px #D1E8FF74;
 
 }
 
-.Barnav2{
-    width: 100%;
-    height: 88px;
-}
+
 .boC{
+    position: relative;
     width: 157px;
     height:48px;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
+    justify-content: space-between;
     padding: 12px;
-    position: relative;
+    margin-right: 12px;
 }
-.txtCerrar{
+
+
+.vs1{
     position: absolute;
-    padding-right: 12px;
+    width:  100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.txtCerrar{
+    left: 1px;
+    font-family: 'Open Sans', Bold;
+    user-select: none;
     font-size: 14px;
     font-weight: 700;
-    font-family: 'Open Sans', Bold;
+    padding-right: 12px;
     color: #31323F;
-    user-select: none;
-    width: 200px;
-    top: 5px;
-    height: 38px;
-    padding:8px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    right: 50px;
-    cursor: pointer;
 }
 .icoSalir{
+    right: 10px;
     margin-top: 5px;
     color: #31323F;
-}
-.icoSalir img {
-    font-size: 4px;
     width: 28px;
+    font-size: 4px;
 }
 .navlogo{
     width: 83.11px;
@@ -291,6 +285,7 @@
     background: #FAFAFA;
     display:flex;
     align-items: center;
+    justify-content: center;
     
 }
 
@@ -298,9 +293,10 @@
     position: absolute;
     width: 24px;
     height: 24px;
+    top: 32px;
     background: #DD3542;
     border-radius: 50px;
-    margin-left: 28px;
+    left: 28px;
     color: white;
     font-size: 13px;
     font-weight: 700;
@@ -326,113 +322,180 @@
     }
 }
 
+.boxIp{
+    position: absolute;
+    width: 1208px;
+    height: 56px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
 .wg {
     position: relative;
     background: white;
     height: 56px;
     border:1px solid #ABB9C780;
     border-radius:6px;
-}
-.doc{
-
-    margin-left:72px;
-}
-.doc, .day,.hasta,.Numero,.desembolso{
-    margin-right:12px;
-}
-.doc, .day, .hasta {
-    width: 176px;
+    margin-right: 16px;
 }
 
 .Numero,.desembolso{
     width: 272px;
 }
+.InL1 {
+    width:100%;
+    outline:none;
+    height:auto;
+    background: none;
+    padding-top: 28px;
+    cursor:pointer;
+    border:none;
+    font-size: 16px;
+    padding-left: 17px;
+}
 
+.Animation {
+    position:absolute;
+    top:18px;
+    left:16px;
+    color:#ABB9C7;
+    width: 336;
+    height: 16px;
+    cursor: pointer;
+    user-select: none;
+    pointer-events: none;
+    transition: all .3s ease-in;
+
+}
+.InL1:focus ~ .Animation,
+.InL1:not(:placeholder-shown).InL1:not(:focus) ~ .Animation {
+    top:8px;
+    font-size: 12px;
+}
 .nv {
-    width: 1280px;
+    width: 100%;
 }
 .Card{
+    width: 1345px;
+    height: auto;
+    background: #413E4D;
     display: flex;
-    align-items: center;
-    text-align: center;
     justify-content: center;
+}
+.blockBox{
     width: 100%;
-    height: 100%;
-
 }
 .Tbs {
-    width: 1280px;
+    width: 100%;
     font-size: 14px;
     height: 48px;
     background: #ffffff;
     text-align: left;
     border-collapse: collapse;
-    overflow: hidden;
 }
 
 .Tbs thead tr {
     background:#F1F6FB;
     color:#413E4D;
-    text-align: left;
 }
 .Tbs th,
 .Tbs td {
     padding: 12px 15px;
-    padding-left: 72px;
+    padding-left: 2px;
     font-family: 'Open Sans', bold;
 }
 .Tbs tbody tr:nth-of-type(even) {
     background-color: #F7F7F7;
 }
 
+.Color1 {
+
+    color:#413E4D;
+    font-family: 'Open Sans', Bold;
+    font-weight: 700;
+    font-size: 14px;
+}
 .F1
 {
-    width: 245px;
-    color:#413E4D;
-    font-family: 'Open Sans', Bold;
-    font-weight: 700;
+    margin-right: 89px;
 }
 .F2{
-    width: 240px;
-    color:#413E4D;
-    font-family: 'Open Sans', Bold;
-    font-weight: 700;
+    margin-left: 10px;
 }
 .F3
 {
-    width: 236px;
-    color:#413E4D;
-    font-family: 'Open Sans', Bold;
-    font-weight: 700;
+    margin-left: -40px;
 }
-.F4
-{
-    width: 236px;
-    color:#413E4D;
-    font-family: 'Open Sans', Bold;
-    font-weight: 700;
-}
-
 .F5
 {
-    width: 250px;
-    color:#413E4D;
-    font-family: 'Open Sans', Bold;
-    font-weight: 700;
-}
+    margin-right: 90px;
+} 
 
 
-.sticky {
-    position: sticky;
-    background: #ffffff;
-    top:0;
-    width: auto;
-    height: auto;
-}
-.sticky2 th{
-    position: sticky;
+.nvtbs{
+    width: 100%;
+    height: 48px;
     background: #F1F6FB;
-    top:248px;
+    display: flex;
+    
+}
+.bbs{
+    margin-right: 72px;
+    margin-left: 72px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.td1{
+    width: 346px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.td1_1
+{
+    text-align: left;
+    width: 140px;
+    margin-left: 70px;
+}
+.td1_2
+{
+    text-align: left;
+    width: 140px;
+    margin-left: 25px;
+}
+
+.td1_3
+{
+    text-align: left;
+    width: 229px;
+    margin-left: 20px;
+}
+.td2{
+    width: 246px;
+}
+.td3{
+    text-align: center;
+    width: 200px;
+}
+.td4{
+    text-align: left;
+    width: 279px;
+}
+.td5{
+    text-align: left;
+}
+.sticky {
+    width: 100%;
+    position: sticky;
+    background-color: white;
+    top:0;
 }
 
 .Rg{
@@ -462,39 +525,7 @@
     border-radius:6px;
     margin-right:12px;
 }
-.Animation {
-    position:absolute;
-    top:18px;
-    left:16px;
-    color:#ABB9C7;
-    width: 336;
-    height: 16px;
-    cursor: pointer;
-    transition: top .2s;
-    user-select: none;
-    pointer-events: none;
 
-}
-
-
-.InL1 {
-    outline:none;
-    width:336px;
-    height:20px;
-    background: none;
-    margin-top:14px;
-    padding-top: 35px;
-    cursor:pointer;
-    border:none;
-    margin-left:16px;
-    font-size: 16px;
-}
-
-
-.InL1:focus-within ~ .Animation{
-    top:8px;
-    font-size: 12px;
-}
 .flc{
     width: 48px;
     height: 48px;
