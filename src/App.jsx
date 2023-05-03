@@ -293,7 +293,7 @@ export function Inversion() {
 
 
           <div className='Rg1'>
-            <input type="number" className='InL1' placeholder=' '/>
+            <input type="texta" className='InL1' placeholder=' '/>
             <label className='Animation' htmlFor="">Registros por página</label>
             <label className='arrowB' htmlFor=""></label>
           </div>
